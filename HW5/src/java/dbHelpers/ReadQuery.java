@@ -103,6 +103,10 @@ import model.States;
                 table += state.getAge();
                 table += "</td>";
                 
+                table += "<td>";
+                table += "<a href=delete?stateID=" + state.getStateID() + "> Delete </a>"; 
+                table += "</td>";
+                
                 table += "</tr>";
                 
                 
