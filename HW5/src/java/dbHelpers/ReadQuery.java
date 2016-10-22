@@ -68,7 +68,14 @@ import model.States;
         
         String table = "";
         
-        table += "<table border=1>";
+        table += "<table>";
+        
+        table += "<th>State ID</th>";
+        table += "<th>State Name</th>";
+        table += "<th>Year Founded</th>";
+        table += "<th>Population</th>";
+        table += "<th>Age</th>";
+        table += "<th>Tools</th>";
         
         try {
             while(this.results.next()){
@@ -80,8 +87,10 @@ import model.States;
                 state.setYearFounded(this.results.getInt("yearFounded"));
                 state.setPopulation(this.results.getInt("population"));
                 state.setAge(this.results.getInt("age"));
+              
                 
                 table += "<tr>";
+                
                 
                 table += "<td>";
                 table += state.getStateID();
@@ -106,6 +115,7 @@ import model.States;
                 table += "<td>";
                 table += "<a href=delete?stateID=" + state.getStateID() + "> Delete </a>"; 
                 table += "</td>";
+                
                 
                 table += "</tr>";
                 
